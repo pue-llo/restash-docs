@@ -35,12 +35,17 @@ whole site.
 
 ## Cloudflare Pages preview deploy
 
-Repo placement (default): `cfacryptopro/docs`.
+Repo placement: [`pue-llo/docs`](https://github.com/pue-llo/docs)
+(redirected from `cfacryptopro/docs` — that org does not exist on
+GitHub; this repo follows the same `pue-llo/*` namespace used by
+[`pue-llo/cooped-labs-site`](https://github.com/pue-llo/cooped-labs-site)).
+If a `cfacryptopro` GitHub org is created later, transfer the repo via
+**Settings → Transfer ownership**.
 
 Project setup (one-time):
 
 1. Cloudflare dashboard → **Workers & Pages → Create → Pages → Connect to Git**.
-2. Pick the `cfacryptopro/docs` repo.
+2. Pick the `pue-llo/docs` repo.
 3. Framework preset: **Astro**.
 4. Build command: `npm run build`.
 5. Build output directory: `dist`.
