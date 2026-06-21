@@ -1,0 +1,26 @@
+---
+title: Sending us your logs
+description: Where Restash log files live and how to bundle them for support.
+---
+
+import MailLink from '../../../components/MailLink.astro';
+
+If you've hit something we need to debug, attach logs to your support
+email. They live here:
+
+- `~/Library/Logs/Restash/main.log` — the app's main process log.
+- `~/Library/Logs/Restash/renderer.log` — the UI window log.
+- `~/Library/Application Support/restash/` — your data dir. Don't send
+  the whole thing without checking it first — it contains your stash
+  contents.
+
+To collect them in one go:
+
+```bash
+cd ~/Desktop
+mkdir restash-logs
+cp ~/Library/Logs/Restash/*.log restash-logs/
+zip -r restash-logs.zip restash-logs
+```
+
+Attach `restash-logs.zip` to your email to <MailLink />.

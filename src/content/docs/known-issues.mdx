@@ -1,0 +1,24 @@
+---
+title: Known issues (v1.1.0)
+description: A short list of things we know about and are tracking, updated each release.
+---
+
+import MailLink from '../../components/MailLink.astro';
+
+A short list of things we know about and are tracking. We update this page
+each release.
+
+- **Gatekeeper "damaged" warning on first launch.** Ad-hoc signing means
+  macOS occasionally quarantines the bundle. Workaround: see
+  [App won't open](/troubleshooting/app-wont-open/). Fix: notarised
+  builds (tracked, no ETA yet).
+- **No auto-update.** Restash 1.1 doesn't auto-update. To get a new
+  version, `git pull && npm run dist` then reinstall the `.app`.
+- **Environments capture needs Chrome to be running.** If Chrome is
+  closed, the "Capture what's open" sees no Chrome tabs. Open Chrome
+  first.
+- **Light-mode brand mark sometimes uses dark glyph for ~1s** on the
+  first dropdown open after a Restash launch. Cosmetic only.
+
+If you hit something not on this list, email <MailLink /> — we add real
+reports here.

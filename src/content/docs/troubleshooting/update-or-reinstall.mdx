@@ -1,0 +1,25 @@
+---
+title: Update failed or app behaving oddly — clean reinstall
+description: Rebuild Restash from source and reinstall without losing stashes.
+---
+
+When something gets stuck, the cleanest fix is to rebuild and re-install:
+
+```bash
+cd <your restash checkout>
+git pull
+npm install
+npm run dist
+
+# Replace the installed bundle
+rm -rf /Applications/Restash.app
+cp -R dist/mac-arm64/Restash.app /Applications/Restash.app
+xattr -cr /Applications/Restash.app
+open /Applications/Restash.app
+```
+
+Your stashes, license, and settings are preserved — they live in
+`~/Library/Application Support/restash/`, not in the `.app` bundle.
+
+If a stash file looks corrupted, restore it from the timestamped backups
+in `~/Library/Application Support/restash/backups/`.

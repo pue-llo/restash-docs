@@ -1,0 +1,40 @@
+---
+title: Restash docs
+description: Install, activate, and troubleshoot Restash — the stash + paste utility for macOS.
+template: splash
+hero:
+  title: Restash docs
+  tagline: Install, activate, and troubleshoot Restash on macOS.
+  actions:
+    - text: Install Restash
+      link: /getting-started/install/
+      icon: right-arrow
+      variant: primary
+    - text: Contact support
+      link: /contact/
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+	<Card title="Getting started" icon="rocket">
+		[Install](/getting-started/install/) Restash, grant
+		[Accessibility permission](/getting-started/accessibility-permission/),
+		and [activate your license](/getting-started/activate-your-license/).
+	</Card>
+	<Card title="Troubleshooting" icon="warning">
+		Fix the [Gatekeeper "damaged" warning](/troubleshooting/app-wont-open/),
+		[re-prompt for Accessibility](/troubleshooting/accessibility-prompt/), or
+		send us [your logs](/troubleshooting/logs/).
+	</Card>
+	<Card title="Billing & licenses" icon="document">
+		[Find your key](/billing/find-your-license/),
+		[move to a new Mac](/billing/move-to-new-mac/), and read the
+		[refund policy](/billing/refund-policy/).
+	</Card>
+	<Card title="Known issues" icon="information">
+		The current short list of things we're tracking lives on
+		[Known issues](/known-issues/).
+	</Card>
+</CardGrid>

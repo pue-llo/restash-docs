@@ -1,0 +1,22 @@
+---
+title: '"Restash is damaged" or "cannot be opened"'
+description: Strip the Gatekeeper quarantine attribute, or right-click → Open to launch Restash.
+---
+
+Because Restash is ad-hoc signed (not yet notarised), Gatekeeper sometimes
+quarantines the bundle and refuses to open it. Two fixes:
+
+**Fix 1 — strip the quarantine attribute (one command)**
+
+```bash
+xattr -cr /Applications/Restash.app
+open /Applications/Restash.app
+```
+
+**Fix 2 — right-click → Open**
+
+1. In Finder, navigate to `/Applications/`.
+2. **Right-click** `Restash.app` → **Open**.
+3. Click **Open** in the dialog. macOS remembers this for the bundle.
+
+Once notarised builds ship, this prompt will go away.

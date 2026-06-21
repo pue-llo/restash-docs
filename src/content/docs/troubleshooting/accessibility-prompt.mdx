@@ -1,0 +1,18 @@
+---
+title: Accessibility prompt didn't appear (or you dismissed it)
+description: Re-enable the macOS Accessibility prompt and verify Restash can paste.
+---
+
+Restash only prompts once. If you missed it:
+
+1. Open **System Settings → Privacy & Security → Accessibility**.
+2. If `Restash` is in the list, toggle it **on**.
+3. If it's not in the list, click **+**, add `/Applications/Restash.app`,
+   then toggle **on**.
+4. Quit Restash from the menu-bar icon (`⌘Q`) and reopen.
+
+Press **⌃⇧V** to test — the numpad should appear at your cursor.
+
+**Still not working?** Run `tccutil reset Accessibility com.restash.app`
+in Terminal, then redo the steps above. (`tccutil` resets the permission
+so macOS re-prompts.)

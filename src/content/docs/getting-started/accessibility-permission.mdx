@@ -1,0 +1,32 @@
+---
+title: Granting Accessibility permission
+description: Why Restash needs Accessibility, and how to grant it manually on macOS.
+---
+
+Restash needs **Accessibility** access to paste saved items into whichever
+app you're focused on. macOS asks for this the first time you trigger a
+paste.
+
+**Grant it manually (recommended)**
+
+1. Open **System Settings → Privacy & Security → Accessibility**.
+2. Click **+**, then add `Restash` from `/Applications/`.
+3. Toggle the row **on**.
+4. Quit and re-open Restash (`⌘Q` from the menu-bar dropdown, then click
+   the Restash icon again).
+
+**Other permissions you'll see**
+
+- **Automation / Apple Events** — required. Lets Restash focus the target
+  app before pasting, and read open tabs for Environments. macOS prompts
+  per app the first time (Chrome, Safari, Mail, etc.). Click **OK**.
+- **Screen Recording** — optional. Only needed if you use
+  *"This desktop"* Environment capture (current Space only). Skip if you
+  always capture *"Everything open."*
+
+**Why we need them**
+
+Restash never sends what you copy to a server. The permissions stay on
+your Mac. We use Accessibility to **paste** (`⌘V` to the focused app) and
+Automation to know **where** to paste. Code for both lives in
+`bin/macos-paster` and `bin/macos-windows-helper`.
