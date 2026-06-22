@@ -1,13 +1,20 @@
-# Restash docs
+# Restash docs (superseded — content-reference snapshot)
 
-Public documentation site for Restash, built with
+> **Superseded 2026-06-22.** Restash docs now ship inside the existing
+> Next.js marketing site at `https://getrestash.vercel.app/docs`
+> (`cooped-labs-site` repo, `app/docs/...`), not as a standalone Astro
+> Starlight site. This repo is kept as a **content-reference snapshot**
+> — the `.mdx` files under `src/content/docs/` are the source for porting
+> into the Next.js target. The Astro/CF Pages scaffolding here is not
+> reusable. See RES-47 (cancelled) and RES-20 for the directive.
+
+Public documentation site for Restash, originally built with
 [Astro Starlight](https://starlight.astro.build).
 
 - **Source of truth (content):** `faq-content` document on
   [RES-20](/RES/issues/RES-20).
-- **Scaffold tracker:** [RES-47](/RES/issues/RES-47).
-- **Publish blocker:** [RES-27](/RES/issues/RES-27) — email sweep + Support
-  Ops greenlight. **No DNS / production publish until RES-27 closes.**
+- **Scaffold tracker:** [RES-47](/RES/issues/RES-47) — cancelled
+  (superseded by the Next.js child issue on RES-20).
 
 ## Local development
 
